@@ -10,6 +10,7 @@ import java.util.Random;
  * Classe que representa o modelo de ações da bolsa de valores.
  * Implementa a interface Subject para notificar os observadores sobre mudanças nos preços.
  */
+
 public class AcoesBolsa implements Subject {
     private List<Observer> observers;
     private Map<String, Double> precoAcoes;
