@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Executar MonitorAcoes",
+            "request": "launch",
+            "mainClass": "MonitorAcoes",
+            "projectName": "projeto_observer_mvc",
+            "classPaths": ["${workspaceFolder}/bin"],
+            "preLaunchTask": "Compilar Projeto"
+        }
+    ]
+}

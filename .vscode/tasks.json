@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar Projeto",
+            "type": "shell",
+            "command": "mkdir -p bin && javac -d bin -sourcepath . MonitorAcoes.java model/*.java view/*.java controller/*.java",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Executar Projeto",
+            "type": "shell",
+            "command": "java -cp bin MonitorAcoes",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "dependsOn": ["Compilar Projeto"]
+        }
+    ]
+}
