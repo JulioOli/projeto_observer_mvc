@@ -14,7 +14,7 @@ public class MonitorAcoes {
             AcoesBolsa modelo = new AcoesBolsa();
             AcoesView view = new AcoesView();
             AcoesController controller = new AcoesController(modelo, view);
-            
+
             // Adiciona um listener para fechar corretamente a aplicação
             view.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
