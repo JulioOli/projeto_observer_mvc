@@ -78,9 +78,10 @@ public class AcoesBolsa implements Subject {
      * Simula uma mudança aleatória nos preços das ações.
      */
     public void atualizarPrecos() {
-        for (String codigo : precoAcoes.keySet()) {
+        for (Map.Entry<String, Double> entry : precoAcoes.entrySet()) {
+            String codigo = entry.getKey();
+            double precoAtual = entry.getValue();
             double variacaoPercentual = (random.nextDouble() * 2 - 1) * 5; // Variação entre -5% e +5%
-            double precoAtual = precoAcoes.get(codigo);
             double novoPreco = precoAtual * (1 + variacaoPercentual / 100);
             novoPreco = Math.round(novoPreco * 100.0) / 100.0; // Arredonda para 2 casas decimais
             precoAcoes.put(codigo, novoPreco);
