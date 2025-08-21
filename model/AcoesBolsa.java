@@ -12,9 +12,9 @@ import java.util.Random;
  */
 
 public class AcoesBolsa implements Subject {
-    private List<Observer> observers;
-    private Map<String, Double> precoAcoes;
-    private Random random;
+    private final List<Observer> observers;
+    private final Map<String, Double> precoAcoes;
+    private final Random random;
 
     public AcoesBolsa() {
         this.observers = new ArrayList<>();
